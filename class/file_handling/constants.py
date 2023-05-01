@@ -1,0 +1,2 @@
+ACCOUNTS_FILE = 'accounts.csv'
+MIN_BALANCE = 500
