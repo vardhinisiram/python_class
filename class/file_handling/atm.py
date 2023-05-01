@@ -4,25 +4,31 @@ from constants import MIN_BALANCE
 
 
 accounts = read_data()
-
+print(accounts)
 num = input("enter the accnum: ")
-
-if num in accounts:
+is_account_exist = False
+account_dict= {}
+for index, account in enumerate(accounts):
+    if account['account_num'] == num:
+        found_index = index
+        total = float(account['balance'])
+        account_dict[account[''account_num''] ] = float(account['balancd')]
+        is_account_exist = True
+if is_account_exist:
     print("Accont detected")
-    total = accounts[num]
+    # Proceed with transaction
     withdrawl = int(input("Enter the amount you ned: "))
-
     if total - withdrawl >= MIN_BALANCE:
-        # Proceed with transaction
         remainder = total - withdrawl
-        accounts[num] = remainder
+        accounts[found_index]['balance'] = remainder
+        print(accounts[found_index])
         is_done = write_data(accounts)
         if is_done:
             print("The remaining balance is ", remainder)
         else:
             print("Error writing balance")
     else:
-        print("INSUFFICIENT FUNDS")
+        print("Insufficient funds..")        
 else:
     print("Create an account first.  ")
 print("THANKS FOR BANKING WITH US")
