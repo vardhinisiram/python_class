@@ -7,7 +7,6 @@ while len(a)!=0:
 		if small>a[i]:
 			small=a[i]
 		i=i+1
-	print(small)
 	a.remove(small)
 	b.append(small)
 	
