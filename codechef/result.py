@@ -10,3 +10,5 @@ for i in range(T):
         print("fail")
     elif c<35.0:
         print("fail")
+else:
+    print("pass")
