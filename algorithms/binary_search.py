@@ -1,4 +1,4 @@
-a=[20,25,30,35,40,45]
+a=[20,25,30,35,40]
 x=int(input("enter the number: "))
 found=False
 while len(a)!=0:

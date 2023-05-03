@@ -1,5 +1,7 @@
 with open ('file' ,'r') as f:
-        val=f.readline().split( )
-        x,y=[int(x) for x in val]
+    for row in f.readlines():
+        x,y=[int(x) for x in row.split()]
         c = x+y
-        print(x ,y ,c)
+        output = open('output.txt', 'a') 
+        output.write(" ".join([str(x), str(y), str(c)]))
+        output.write("\n")
