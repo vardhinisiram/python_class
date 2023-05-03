@@ -1,12 +1,13 @@
-def grater(x,y,z):
+def grater(x:int,y:int,z:int)->int:
         #x,y,z=[ int (x) for x in input("enter three values: ").split()]
+    big = 0
     if x>y and x>z:
-         print(x, "is bigger")
+        big = x 
     elif y>z and y>x:
-         print(y, "is bigger")
+        big = y 
     elif z>x and z>y:
-         print(z, "is bigger")
-    return 0
+        big = z
+    return big
 
 largest=grater(4,6,2)
 
