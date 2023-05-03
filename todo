@@ -1,14 +1,14 @@
 Practice coding problems from  codeforces 
-Re-implement binary search with more efficient code.
+#Re-implement binary search with more efficient code.
 Refer file handling documentation: 
 	# https://python-reference.readthedocs.io/en/latest/docs/file/
-	https://python-adv-web-apps.readthedocs.io/en/latest/csv.html
+	#https://python-adv-web-apps.readthedocs.io/en/latest/csv.html
 # Rename and organize all files and folders. 
 
 Solve the discussed currency dinomination problem.
 # Bublle sort program. 
 revise all the topics so far.
-write a filehandling program
+#write a filehandling program
 
 
 
