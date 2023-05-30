@@ -1,0 +1,26 @@
+<html>
+    <head>
+        <script>
+            function add()
+            {
+                var numOne, numTwo, sum;
+                numOne = parseInt(document.getElementById("first").value);
+                numTwo = parseInt(document.getElementById("second").value);
+                sum = numOne + numTwo;
+                document.getElementById("result").innerText = sum;
+            }
+        </script>
+    </head>
+    <body>
+        <h1>
+            This is my basic html program...
+        </h1>
+        <h2>
+            this is a sub heading..
+        </h2>
+    first number:   <input type = "text" id="first"> <br>
+    Second number:  <input type = "text" id = "second"> <br>
+    <button onclick="add()">Add</button>
+    <h1 id = "result" ></h1>
+    </body>
+</html>
