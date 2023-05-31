@@ -1,0 +1,93 @@
+<html>
+    <head>
+        <style>
+            input {
+                position: relative;
+                padding: 1.2%;
+                font-size: large;
+                text-align: center;
+                align-self: center;
+            }
+.button {
+  position: relative;
+  background-color: #4CAF50;
+  border: none;
+  font-size: 28px;
+  color: #FFFFFF;
+  padding: 20px;
+  width: 200px;
+  text-align: center;
+  transition-duration: 0.4s;
+  text-decoration: none;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.button:after {
+  content: "";
+  background: #f1f1f1;
+  display: block;
+  position: absolute;
+  padding-top: 300%;
+  padding-left: 350%;
+  margin-left: -20px !important;
+  margin-top: -120%;
+  opacity: 0;
+  transition: all 0.8s
+}
+
+.button:active:after {
+  padding: 0;
+  margin: 0;
+  opacity: 1;
+  transition: 0s
+        </style>
+        <script>
+            function add()
+            {
+                var numOne, numTwo, sum;
+                numOne = parseInt(document.getElementById("first").value);
+                numTwo = parseInt(document.getElementById("second").value);
+                sum = numOne + numTwo;
+                document.getElementById("result").innerText = sum;
+            }
+            function difference()
+            {
+                var numOne, numTwo, sum;
+                numOne = parseInt(document.getElementById("first").value);
+                numTwo = parseInt(document.getElementById("second").value);
+                sum = numOne - numTwo;
+                document.getElementById("result").innerText = sum;
+            }          
+            function multiply()
+            {
+                var numOne, numTwo, sum;
+                numOne = parseInt(document.getElementById("first").value);
+                numTwo = parseInt(document.getElementById("second").value);
+                sum = numOne * numTwo;
+                document.getElementById("result").innerText = sum;
+            }
+            function division()
+            {
+                var numOne, numTwo, sum;
+                numOne = parseInt(document.getElementById("first").value);
+                numTwo = parseInt(document.getElementById("second").value);
+                sum = numOne / numTwo;
+                document.getElementById("result").innerText = sum;
+            }
+        </script>
+    </head>
+    <body>
+    <center>
+        first number:   <input type = "text" id="first"> <br>
+        Second number:  <input type = "text" id = "second"> <br>
+        <button class="button" onclick="add()">+</button>
+        <button class="button" onclick="difference()">-</button>
+        <button class="button" onclick="multiply()">x</button>
+        <button class="button" onclick="division()">/</button>
+        <h1 id = "result" ></h1>
+        <a href="/dog_download">Download dog image</a>
+    
+    </center>
+    </body>
+</html>

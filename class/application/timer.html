@@ -1,0 +1,43 @@
+<html>
+    <head>
+        <style>
+            input {
+                background-color: blue;
+                position: relative;
+                padding: 1.2%;
+                font-size: large;
+                text-align: center;
+                align-self: center;
+            }
+            button {
+                padding: 16px;
+                border-radius: 50%;
+                background-color: white;
+                color: black;
+                border: 2px solid #4CAF50;
+            }
+        </style>
+        <script>
+            function sleep(ms) {
+                return new Promise(resolve => setTimeout(resolve, ms));
+            }
+            async function start() {
+                seconds = parseInt(document.getElementById("seconds").value);
+                for (let index = seconds; index >= 0; index--) {
+                    document.getElementById("timer").innerHTML = index;
+                    await sleep(1000);
+                }
+                document.getElementById("timer").innerHTML = "COMPLETED!"
+                await sleep(3000);
+                document.getElementById("timer").innerHTML = ""
+            }
+        </script>
+    </head>
+    <body>
+        <center>
+            <input type = "text" id = "seconds" style=""><br>
+            <button onclick="start()"   >START TIMER!  </button>
+            <h1 id = "timer" ></h1>
+        </center>
+    </body>
+</html>
